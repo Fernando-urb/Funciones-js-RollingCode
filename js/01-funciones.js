@@ -5,11 +5,7 @@ const meses = [
       "Mayo", "Junio", "Julio", "Agosto",
       "Septiembre", "Octubre", "Noviembre", "Diciembre"
     ];
+    for (let i = 0; i < meses.length; i++) {
+  console.log(`${i + 1}. ${meses[i]}`);
+}
 
-    // Mostrar los meses en forma de lista
-    const lista = document.getElementById("listaMeses");
-    meses.forEach(mes => {
-      let item = document.createElement("li");
-      item.textContent = mes;
-      lista.appendChild(item);
-    });

@@ -8,35 +8,40 @@
 
 // [‘Nueva York, Estados Unidos’, ‘Barcelona, España’, ‘Tokio, Japón’, ‘Londres, Reino Unido’, ‘Roma, Italia’, ‘Pekín, China’, ‘Río de Janeiro, Brasil’, ‘Ámsterdam, Países Bajos’, ‘Sídney, Australia’, ‘El Cairo, Egipto’]
 
-let ciudades = [];
-    let ciudad;
 
-    // Solicita ciudades hasta que el usuario cancele
-    while (true) {
-      ciudad = prompt("Ingrese el nombre de una ciudad:");
-      if (ciudad === null) break;
-      ciudades.push(ciudad);
-    }
+let ciudads = [];
+let ciudad;
 
-    // Muestra el arreglo completo en consola
-    console.log("Ciudades ingresadas:", ciudades);
+while (true) {
+  ciudad = prompt("Ingresa nombre de ciudades");
+  if (ciudad === null) break;
 
-    // Mostrar longitud del arreglo
-    console.log("Longitud del arreglo:", ciudades.length);
+  ciudad = ciudad.trim();
+  if (ciudad !== "") {
+    ciudads.push(ciudad);
+  }
+}
 
-    // Mostrar primera, tercera y última ciudad en el documento
-    let resultado = document.getElementById("resultado");
-    resultado.innerHTML += `<p>Primera ciudad: ${ciudades[0]}</p>`;
-    resultado.innerHTML += `<p>Tercera ciudad: ${ciudades[2]}</p>`;
-    resultado.innerHTML += `<p>Última ciudad: ${ciudades[ciudades.length - 1]}</p>`;
 
-    // Añadir París al final
-    ciudades.push("París");
-    console.log("Se añadió París:", ciudades);
 
-    // Mostrar segunda ciudad
-    resultado.innerHTML += `<p>Segunda ciudad: ${ciudades[1]}</p>`;
+// longitud
+document.write(`<p> Longitud del arreglo: ${ciudads.length} </p>`);
 
-    // Sustituir segunda ciudad por Barcelona
-    ciudades[1] = "Barcelona";
-    console.log("Segunda ciudad sustituida por Barcelona:", ciudades);
+//  Mostrar primera, tercera y última ciudad
+document.write( `<p> ${ciudads[0]} es la primera ciudad </p>`);
+document.write(`<p> ${ciudads[2]} es la tercera ciudad </p>`);
+document.write(`<p> ${ciudads[ciudads.length - 1]} es la ultima ciudad </p>`);
+
+//  agregar París al final
+ciudads.push("Paris");
+document.write(`<p> se agrego a Paris ,ahora son : ${ciudads}</p>`);
+
+//  Mostrar segunda ciudad
+document.write(`<p> ${ciudads[1]} es la segunda ciudad</p>`);
+
+//  Sustituir segunda ciudad por Barcelona
+ciudads[1] = "Barcelona";
+document.write(`<p> se modifica la segunda posicion , ahora ${ciudads[1]} esta en el segundo lugar </p>`);
+
+//  arreglo final
+document.write(`<p> Arreglo final de ${ciudads}</p>`);
