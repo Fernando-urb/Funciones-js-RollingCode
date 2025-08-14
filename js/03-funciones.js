@@ -2,7 +2,7 @@
 
 
 
-let apariciones = Array(13).fill(0); 
+let apariciones =[0,0,0,0,0,0,0,0,0,0,0,0,0]; 
 
 
 const tirarDado = () => {
